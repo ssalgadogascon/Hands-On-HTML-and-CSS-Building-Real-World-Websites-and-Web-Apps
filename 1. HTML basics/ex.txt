@@ -1,0 +1,22 @@
+Create an HTML document that contains the following elements:
+
+A heading with the text "My Favorite Foods".
+An ordered list of your top three favorite foods, each represented by a list item that contains the food name and a brief description.
+An image of one of your favorite foods, with an alt attribute that describes the image.
+Hint: Use the <h1>, <ol>, <li>, <img>, and <p> tags to create these elements.
+
+
+Starter code:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Favorite Foods</title>
+</head>
+<body>
+
+<!-- Your code goes here -->
+
+</body>
+</html>

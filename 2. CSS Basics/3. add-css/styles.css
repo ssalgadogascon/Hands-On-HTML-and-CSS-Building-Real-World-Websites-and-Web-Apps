@@ -1,0 +1,114 @@
+/* Selector for the entire page */
+html {
+	background-color: pink;
+}
+
+/* Selector for the body of the page */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Selector for the header element using an ID selector */
+#main-header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+/* Selector for the h1 element inside the header using a descendant selector */
+#main-header h1 {
+	margin: 0;
+}
+
+/* Selector for the nav element inside the header using a descendant selector */
+#main-header nav {
+	display: inline-block;
+}
+
+/* Selector for the ul element inside the nav using a descendant selector */
+#main-header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Selector for the li element inside the nav using a descendant selector */
+#main-header nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+/* Selector for the a element inside the li inside the nav using a descendant selector */
+#main-header nav li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Selector for the section element using an element selector */
+section {
+	padding: 20px;
+}
+
+/* Selector for the h2 element inside the section using a descendant selector */
+section h2 {
+	margin-top: 0;
+}
+
+/* Selector for the article element inside the section using a descendant selector */
+section article {
+	margin-bottom: 20px;
+}
+
+/* Selector for the h3 element inside the article using a descendant selector */
+section article h3 {
+	margin-top: 0;
+}
+
+/* Selector for the p element inside the article using a descendant selector */
+section article p {
+	line-height: 1.5;
+}
+
+/* Selector for the aside element using an element selector */
+aside {
+	background-color: #eee;
+	padding: 20px;
+}
+
+/* Selector for the h2 element inside the aside using a descendant selector */
+aside h2 {
+	margin-top: 0;
+}
+
+/* Selector for the p element inside the aside using a descendant selector */
+aside p {
+	line-height: 1.5;
+}
+
+/* Selector for the footer element using an element selector */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Selector for a class selector */
+.text-muted {
+	color: #999;
+	font-style: italic;
+}
+
+/* Selector for an ID selector and a pseudo-selector */
+#main-header nav li a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+/* Selector for an attribute selector */
+img[alt="Example Image"] {
+	max-width: 100%;
+	height: auto;
+}

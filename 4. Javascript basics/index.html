@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi-Language Example</title>
+	<style>
+		.language-selector {
+			margin-bottom: 20px;
+		}
+
+		.content {
+			font-size: 1.2rem;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<div class="language-selector">
+		<label for="language">Select Language:</label>
+		<select id="language" onchange="changeLanguage()">
+			<option value="en">English</option>
+			<option value="es">Español</option>
+			<option value="fr">Français</option>
+		</select>
+	</div>
+
+	<div class="content">
+		<h1 data-en="Welcome!" data-es="¡Bienvenido!" data-fr="Bienvenue!">Welcome!</h1>
+		<p data-en="This is an example of multi-language content." data-es="Este es un ejemplo de contenido multilingüe." data-fr="Ceci est un exemple de contenu multilingue.">This is an example of multi-language content.</p>
+		<ul>
+			<li data-en="Item 1" data-es="Elemento 1" data-fr="Article 1">Item 1</li>
+			<li data-en="Item 2" data-es="Elemento 2" data-fr="Article 2">Item 2</li>
+			<li data-en="Item 3" data-es="Elemento 3" data-fr="Article 3">Item 3</li>
+		</ul>
+	</div>
+
+	<script>
+		function changeLanguage() {
+			var language = document.getElementById('language').value;
+			var elements = document.querySelectorAll('[data-' + language + ']');
+
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].innerHTML = elements[i].getAttribute('data-' + language);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Create an HTML document that includes the following:
+
+A heading with the text "My Favorite Movies".
+An unordered list of your top five favorite movies, each represented by a list item that includes the movie title, director, and year of release.
+A table that displays information about each movie, including the title, director, year of release, and a brief description.
+Add a CSS style rule to the table to set the text alignment to center and add a background color to the table header row.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Favorite Movies</title>
+</head>
+<body>
+
+<!-- Your code goes here -->
+
+</body>
+</html>
