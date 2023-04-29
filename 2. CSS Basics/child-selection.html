@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container  {
+    border: 1px solid black;
+  }
+
+  /* Select all direct children of div with class "container" */
+  .container > * {
+    border: 2px solid black;
+  }
+
+  /* Select all p elements that are direct children of div with class "container" */
+  .container > p {
+    color: blue;
+  }
+
+  /* Select all span elements that are children (direct or indirect) of div with class "container" */
+  .container span {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <p>First child (direct child, p element)</p>
+  <span>Second child (direct child, span element)</span>
+  <div>
+    <span>Third child (indirect child, span element inside a div)</span>
+  </div>
+  <p>Fourth child (direct child, p element)</p>
+</div>
+
+</body>
+</html>
