@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Styles Demo</title>
+    <style>
+        /* Basic styling for visual clarity */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BLOCK DISPLAY -->
+    <!-- Block elements start on a new line and occupy the full width of their parent container. -->
+    <div class="box" style="display: block; background-color: lightblue;">
+        This is a block element. It starts on a new line and takes the full width.
+    </div>
+
+    <!-- INLINE DISPLAY -->
+    <!-- Inline elements do not start on a new line. They only take up as much width as necessary. -->
+    <span class="box" style="display: inline; background-color: lightgreen;">This is</span>
+    <span class="box" style="display: inline; background-color: lightyellow;">an inline element.</span>
+
+    <!-- FLEX DISPLAY -->
+    <!-- Flex display allows for a more advanced layout of child elements horizontally or vertically within a container. -->
+    <div class="box" style="display: flex; background-color: lightcoral; justify-content: space-between;">
+        <div>Flex Item 1</div>
+        <div>Flex Item 2</div>
+        <div>Flex Item 3</div>
+    </div>
+
+    <!-- GRID DISPLAY -->
+    <!-- Grid display allows for complex two-dimensional layouts. Here, we create a basic 2x2 grid. -->
+    <div class="box"
+        style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; background-color: lightpink;">
+        <div>Grid Item 1</div>
+        <div>Grid Item 2</div>
+        <div>Grid Item 3</div>
+        <div>Grid Item 4</div>
+    </div>
+
+    <!-- INLINE-BLOCK DISPLAY -->
+    <!-- Inline-block elements are like a hybrid. They flow with inline elements but can have width and height like block elements. -->
+    <div class="box" style="display: inline-block; background-color: lightsalmon; width: 150px;">
+        This is an inline-block element.
+    </div>
+
+    <!-- NONE DISPLAY -->
+    <!-- Elements with display set to "none" are not visible and do not take up any space in the layout. -->
+    <div class="box" style="display: none; background-color: lightgray;">
+        This element won't be visible because its display is set to "none".
+    </div>
+
+    <p>Note: The element above is not visible on the page due to its display property being set to "none".</p>
+
+</body>
+
+</html>

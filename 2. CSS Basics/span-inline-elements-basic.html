@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Display Example</title>
+    <style>
+        /* Basic styling for visual clarity */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .highlight {
+            display: inline-block;
+            /* This sets the element to be displayed inline */
+            background-color: lightyellow;
+            /* Adding a background color for visual distinction */
+            border: 1px solid black;
+            /* A border to see the boundaries of the inline element */
+            padding: 5px;
+            /* Some padding for aesthetics */
+        }
+
+        div.highlight {
+            display: inline;
+            margin: 0;
+            /* This removes the default margins */
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>This is a
+    <div class="highlight">simple</div> example of <span class="highlight">inline</span> display.</p>
+
+    <p>Inline elements do not start on a new line and only take up as much width as necessary. As seen with the <span
+            class="highlight">highlighted</span> words in this paragraph.</p>
+
+</body>
+
+</html>

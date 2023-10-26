@@ -1,13 +1,27 @@
+<!-- Declares the document type and version of HTML being used (HTML5 in this case) -->
 <!DOCTYPE html>
+
+<!-- The main root element of the document; 'lang="en"' specifies the language of the document is English -->
 <html lang="en">
 
-<head>
+<head> <!-- The head element contains meta-information and other data that isn't displayed directly on the page -->
+
+  <!-- Specifies the character set for the document; UTF-8 encompasses almost all characters in all human languages -->
   <meta charset="UTF-8">
+
+  <!-- The title of the document, which is displayed on the browser's title bar or tab -->
   <title>Inline</title>
+
 </head>
 
-<body>
-  <h1 style="color: blue;">Style Me in Blue!</h1>
-</body>
+<body> <!-- The body element contains the content that will be visually displayed in the browser -->
 
-</html>
+  <!-- An 'h1' element, which is a top-level heading. The inline 'style' attribute is used to apply CSS directly to this element. -->
+  <!-- In this case, the text color of the heading is set to blue. -->
+  <h1 style="color: blue; background-color: pink; display: inline-block;">Style Me in Blue!</h1>
+
+  <h1 style="color: blue; background-color: pink;">Style Me in Blue!</h1>
+
+</body> <!-- Closing tag for the body element -->
+
+</html> <!-- Closing tag for the html element -->
