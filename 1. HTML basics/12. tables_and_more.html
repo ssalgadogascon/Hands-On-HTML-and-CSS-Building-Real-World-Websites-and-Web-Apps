@@ -1,0 +1,132 @@
+<!-- HTML Document demonstrating table usage with comments-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Table Example</title>
+    <!-- Adding some basic styles for table formatting -->
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start of the main table -->
+    <table>
+        <!-- The <thead> section contains the header row for the table -->
+        <thead>
+            <tr>
+                <!-- Each <th> element defines a header cell in the table -->
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+
+        <!-- The <tbody> section contains the body rows of the table -->
+        <tbody>
+            <tr>
+                <!-- Product Name -->
+                <td>Widget</td>
+                <!-- Product Price -->
+                <td>$10.00</td>
+                <!-- Quantity Ordered -->
+                <td>3</td>
+                <!-- Subtotal calculated by multiplying Price and Quantity -->
+                <td>$30.00</td>
+            </tr>
+            <tr>
+                <!-- Product Name -->
+                <td>Gizmo</td>
+                <!-- Product Price -->
+                <td>$5.00</td>
+                <!-- Quantity Ordered -->
+                <td>2</td>
+                <!-- Subtotal calculated by multiplying Price and Quantity -->
+                <td>$10.00</td>
+            </tr>
+            <!-- Add more rows if needed. This helps to expand the table content dynamically. -->
+        </tbody>
+
+        <!-- The <tfoot> section contains the footer row, usually for total or summary information -->
+        <tfoot>
+            <tr>
+                <!-- colspan="3" attribute is used here to make this cell span across three columns -->
+                <td colspan="3">Total:</td>
+                <!-- Total value for all items in the table -->
+                <td>$40.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Explanation of Table Tags -->
+    <div style="width: 60%; margin: 20px auto; font-family: Arial, sans-serif;">
+        <h3>Table Structure Explained</h3>
+        <ul>
+            <li>
+                <strong>&lt;thead&gt;</strong> - This tag is used for the header section of the table. It helps group
+                header rows so they are easy to identify. It is particularly useful when tables are long and may need
+                repeated header information.
+            </li>
+            <li>
+                <strong>&lt;tbody&gt;</strong> - This tag is used for the main body of the table, containing the data
+                rows. It helps in separating the content rows from the header and footer, making the table more readable
+                and maintainable.
+            </li>
+            <li>
+                <strong>&lt;tfoot&gt;</strong> - This tag is for the footer section, often used for summary information
+                like totals or averages. It is typically placed after the <strong>&lt;tbody&gt;</strong> but before
+                closing the <strong>&lt;table&gt;</strong> tag, allowing the browser to render it effectively even
+                before all data rows are loaded.
+            </li>
+            <li>
+                <strong>&lt;th&gt;</strong> - Defines a header cell in the table. The text in
+                <strong>&lt;th&gt;</strong> is usually bold and centered, providing an easy way to differentiate header
+                cells from normal data cells. Use <strong>&lt;th&gt;</strong> to make your table more accessible as
+                screen readers use these tags to describe the data.
+            </li>
+            <li>
+                <strong>&lt;td&gt;</strong> - Defines a standard cell containing data in the table. It holds the actual
+                information you want to display. You can use attributes like <strong>rowspan</strong> or
+                <strong>colspan</strong> to merge cells as needed.
+            </li>
+            <li>
+                <strong>colspan</strong> - An attribute used to make a cell span across multiple columns. For example,
+                if you want a "Total" label to span across three columns, you use <strong>colspan="3"</strong>. This is
+                helpful in creating more readable summary or footer rows.
+                <!-- Thanks for letting me help you understand this part! Using colspan effectively can help make your tables look cleaner and more organized. -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- Thank you for going through this detailed table example. I hope it helps you understand how to create and use tables effectively in HTML! Tables are a great way to organize and display data in a structured format, and understanding these tags will make your work much easier. -->
+</body>
+
+</html>

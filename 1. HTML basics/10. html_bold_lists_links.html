@@ -1,0 +1,113 @@
+<!-- HTML Document demonstrating bolding vs strong, different types of lists, images, and links with detailed comments -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolding, Lists, Images, and Links Example</title>
+    <!-- Adding some basic styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Demonstrating <b> vs <strong> -->
+    <h2>Bolding vs Strong Emphasis</h2>
+    <p>
+        <!-- <b> is used for stylistic bolding without semantic meaning -->
+        <b>Warning:</b> This product may cause side effects.
+    </p>
+    <p>
+        <!-- <strong> is used for semantically emphasizing text that has importance -->
+        Please <strong>do not touch</strong> the artwork, the phrase "do not touch" has semantic importance and should
+        be stressed.
+    </p>
+
+    <!-- Demonstrating different types of lists -->
+    <h2>Different Types of Lists</h2>
+    <!-- Ordered list (numbered list) -->
+    <h3>Numbered List</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <!-- Unordered list (bulleted list) -->
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Matilda</li>
+        <li>Lord of the Rings</li>
+    </ul>
+
+    <!-- Definition list -->
+    <h3>Definition List</h3>
+    <dl>
+        <!-- <dt> is the definition term, <dd> is the definition description -->
+        <dt>Term 1</dt>
+        <dd>Definition of Term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition of Term 2</dd>
+        <dt>Term 3</dt>
+        <dd>Definition of Term 3</dd>
+    </dl>
+
+    <!-- Checkbox List -->
+    <h3>Checkbox List</h3>
+    <ul>
+        <li><label><input type="checkbox"> Item 1</label></li>
+        <li><label><input type="checkbox"> Item 2</label></li>
+        <li><label><input type="checkbox"> Item 3</label></li>
+    </ul>
+
+    <!-- Demonstrating images and links -->
+    <h2>Images and Links</h2>
+    <!-- Image with src and alt attributes -->
+    <img src="cat.jpg" alt="A picture of a cat">
+    <p>The <strong>src</strong> attribute in the <code>&lt;img&gt;</code> tag is used to specify the image URL, and the
+        <strong>alt</strong> attribute provides an alternative text description for accessibility purposes.
+    </p>
+
+    <!-- Hyperlink example -->
+    <p>The "HT" in HTML stands for "Hypertext," which refers to linking pages through hyperlinks. Click the link below
+        to visit an example website:</p>
+    <a href="https://www.example.com">Click here to visit Example.com</a>
+    <p>The <code>&lt;a&gt;</code> tag creates a hyperlink, allowing users to click on it and navigate to a different
+        webpage. The <strong>href</strong> attribute specifies the URL for the link.</p>
+
+    <!-- Anchor link example within the page -->
+    <a name="top"></a>
+    <p>Scroll down and click the link below to jump back to the top:</p>
+    <a href="#top">Back to top</a>
+    <p>The <code>&lt;a name="top"&gt;</code> tag is used to create an anchor named "top" that can be linked to from
+        elsewhere on the page.</p>
+
+    <!-- Thank you for reviewing this comprehensive example demonstrating bolding, lists, images, and links! -->
+</body>
+
+</html>

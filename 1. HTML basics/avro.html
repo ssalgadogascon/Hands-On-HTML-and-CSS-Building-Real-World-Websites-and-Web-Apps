@@ -1,0 +1,152 @@
+<!-- HTML Document demonstrating bolding vs strong, different types of lists, images, and links with detailed comments -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolding, Lists, Images, and Links Example</title>
+    <!-- Adding some basic styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Demonstrating <b> vs <strong> -->
+    <h2>Bolding vs Strong Emphasis</h2>
+    <p>
+        <!-- <b> is used for stylistic bolding without semantic meaning -->
+        <b>Warning:</b> This product may cause side effects.
+    </p>
+    <p>
+        <!-- <strong> is used for semantically emphasizing text that has importance -->
+        Please <strong>do not touch</strong> the artwork, the phrase "do not touch" has semantic importance and should
+        be stressed.
+    </p>
+
+    <!-- Demonstrating different types of lists -->
+    <h2>Different Types of Lists</h2>
+    <!-- Ordered list (numbered list) -->
+    <h3>Numbered List</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <!-- Unordered list (bulleted list) -->
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Matilda</li>
+        <li>Lord of the Rings</li>
+    </ul>
+
+    <!-- Definition list -->
+    <h3>Definition List</h3>
+    <dl>
+        <!-- <dt> is the definition term, <dd> is the definition description -->
+        <dt>Term 1</dt>
+        <dd>Definition of Term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition of Term 2</dd>
+        <dt>Term 3</dt>
+        <dd>Definition of Term 3</dd>
+    </dl>
+
+    <!-- Checkbox List -->
+    <h3>Checkbox List</h3>
+    <ul>
+        <li><label><input type="checkbox"> Item 1</label></li>
+        <li><label><input type="checkbox"> Item 2</label></li>
+        <li><label><input type="checkbox"> Item 3</label></li>
+    </ul>
+
+    <!-- Demonstrating images and links -->
+    <h2>Images and Links</h2>
+    <!-- Image with src and alt attributes -->
+    <img src="https://www.example.com/images/cat.jpg" alt="A picture of a cat">
+    <p>The <strong>src</strong> attribute in the <code>&lt;img&gt;</code> tag is used to specify the image URL, and the
+        <strong>alt</strong> attribute provides an alternative text description for accessibility purposes.
+    </p>
+
+    <!-- Hyperlink example -->
+    <p>The "HT" in HTML stands for "Hypertext," which refers to linking pages through hyperlinks. Click the link below
+        to visit an example website:</p>
+    <a href="https://www.example.com">Click here to visit Example.com</a>
+    <p>The <code>&lt;a&gt;</code> tag creates a hyperlink, allowing users to click on it and navigate to a different
+        webpage. The <strong>href</strong> attribute specifies the URL for the link.</p>
+
+    <!-- Anchor link example within the page -->
+    <a name="top"></a>
+    <p>Scroll down and click the link below to jump back to the top:</p>
+    <a href="#top">Back to top</a>
+    <p>The <code>&lt;a name="top"&gt;</code> tag is used to create an anchor named "top" that can be linked to from
+        elsewhere on the page.</p>
+
+    <!-- Demonstrating protocol buffers vs Avro comparison -->
+    <h2>Protocol Buffers vs Avro</h2>
+    <p>Both Protocol Buffers and Avro are data serialization frameworks, but they have some key differences:</p>
+    <ul>
+        <li><strong>Schema Evolution:</strong> Avro has better support for schema evolution, allowing for adding new
+            fields without breaking compatibility. Protocol Buffers can evolve but require careful management of field
+            numbers.</li>
+        <li><strong>Encoding:</strong> Protocol Buffers use binary encoding, which is very efficient and compact. Avro
+            also uses binary encoding but includes more metadata, which can make the data slightly larger but more
+            flexible.</li>
+        <li><strong>Usage Scenario:</strong> Protocol Buffers are often used for internal service communication (e.g.,
+            gRPC). Avro is popular in data storage and streaming, especially with Apache Kafka.</li>
+    </ul>
+    <h3>Simple Data Example</h3>
+    <p>Consider the following data:</p>
+    <pre>{ "name": "Alice", "age": 30, "email": "alice@example.com" }</pre>
+    <p><strong>JSON Encoding:</strong> Each character is encoded as UTF-8, for example:</p>
+    <ul>
+        <li><code>7B</code>: <strong>{</strong> (Opening curly brace)</li>
+        <li><code>22</code>: <strong>"</strong> (Quotation mark)</li>
+        <li><code>20</code>: <strong> </strong> (Space)</li>
+        <li><code>3A</code>: <strong>:</strong> (Colon)</li>
+        <li><code>2C</code>: <strong>,</strong> (Comma)</li>
+        <li><code>0A</code>: Newline character</li>
+    </ul>
+    <p><strong>Protocol Buffers Encoding:</strong> The same data is encoded in binary, using field numbers:</p>
+    <ul>
+        <li><code>0A</code>: Field number 1, type string (name)</li>
+        <li><code>05</code>: Length of the string "Alice"</li>
+        <li><code>41 6C 69 63 65</code>: The value "Alice" in UTF-8</li>
+        <li><code>10</code>: Field number 2, type int32 (age)</li>
+        <li><code>1E</code>: The value 30 in hexadecimal</li>
+        <li><code>1A</code>: Field number 3, type string (email)</li>
+        <li><code>11</code>: Length of the string "alice@example.com"</li>
+        <li><code>61 6C 69 63 65 40 65 78 61 6D 70 6C 65 2E 63 6F 6D</code>: The value "alice@example.com" in UTF-8</li>
+    </ul>
+    <p>This illustrates how Protocol Buffers use a more compact representation compared to JSON by avoiding the
+        repetition of field names and using shorter field numbers instead.</p>
+
+    <!-- Thank you for reviewing this comprehensive example demonstrating bolding, lists, images, links, and data serialization formats! -->
+</body>
+
+</html>

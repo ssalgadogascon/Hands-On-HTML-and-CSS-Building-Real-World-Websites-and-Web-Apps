@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-  /* Chaining selectors */
-  div.container.special p.highlight {
-    color: red;
-    font-weight: bold;
-  }
-</style>
+  <style>
+    /* Chaining selectors */
+    div.container.special p.highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container special">
-  <p>Regular paragraph</p>
-  <p class="highlight">Highlighted paragraph</p>
-</div>
+  <div class="container special">
+    <p>Regular paragraph</p>
+    <div>
+      <p class="highlight">Highlighted paragraph</p>
+    </div>
+  </div>
 
-<div class="container">
-  <p>Regular paragraph</p>
-  <p class="highlight">This paragraph won't be affected</p>
-</div>
+  <div class="container">
+    <p>Regular paragraph</p>
+    <p class="highlight">This paragraph won't be affected</p>
+  </div>
 
 </body>
+
 </html>
