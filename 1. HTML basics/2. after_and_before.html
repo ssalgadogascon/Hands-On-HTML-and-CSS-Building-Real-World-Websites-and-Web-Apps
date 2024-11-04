@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Blank Example</title>
+    <style>
+        /* Base link styling */
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Style specifically for links that open in a new tab */
+        a[target="_blank"]::before {
+            content: " (opens in new tab)";
+            font-weight: normal;
+            font-size: 0.9em;
+            color: gray;
+        }
+
+        a[target="_blank"]::after {
+            content: " (pepito)";
+            font-weight: normal;
+            font-size: 0.9em;
+            color: red;
+        }
+
+        p::after {
+            content: " (es un parrafo)";
+            font-weight: normal;
+            font-size: 0.9em;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <p><a href="https://www.example.com" target="_blank">Visit Example.com</a></p>
+    <p><a href="#section" target="_blank">Internal Link (in new tab)</a></p>
+</body>
+
+</html>

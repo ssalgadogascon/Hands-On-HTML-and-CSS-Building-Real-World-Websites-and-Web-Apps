@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target _blank Example</title>
+    <style>
+        /* Basic styling for links */
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Styling for links that open in a new tab */
+        a[target="_blank"] {
+            color: red;
+            /* Different color to signify it opens in a new tab */
+            font-style: italic;
+        }
+
+        /* Tooltip styling */
+        a[target="_blank"]::after {
+            content: " (opens in new tab)";
+            font-weight: normal;
+            font-size: 0.9em;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Understanding target="_blank"</h1>
+
+    <!-- Internal link without target="_blank" -->
+    <!-- This link opens in the same tab -->
+    <p><a href="#section2">Go to Section 2</a></p>
+
+    <!-- External link with target="_blank" -->
+    <!-- Opens in a new tab, which is useful for external websites -->
+    <p><a href="https://www.example.com" target="_blank">Visit Example.com</a></p>
+
+    <!-- Internal link with target="_blank" (not recommended) -->
+    <!-- Even though it's internal, it opens in a new tab. This is usually not a good user experience -->
+    <p><a href="#section3" target="_blank">Go to Section 3 (in new tab)</a></p>
+
+    <!-- Link to a document that opens in a new tab -->
+    <p><a href="https://www.example.com/document.pdf" target="_blank">Open PDF Document</a></p>
+
+    <!-- Link with rel="noopener noreferrer" for security -->
+    <!-- Using rel="noopener noreferrer" prevents the new page from accessing the original page -->
+    <p><a href="https://www.anotherexample.com" target="_blank" rel="noopener noreferrer">Visit Another Example
+            (secure)</a></p>
+
+    <h2 id="section2">Section 2: Internal Navigation</h2>
+    <p>This is section 2 of the page.</p>
+
+    <h2 id="section3">Section 3: More Information</h2>
+    <p>This is section 3 of the page.</p>
+
+    <!-- JavaScript example for handling target="_blank" dynamically -->
+    <script>
+        // Select all external links
+        const externalLinks = document.querySelectorAll('a[target="_blank"]');
+
+        // Loop through each link
+        externalLinks.forEach(link => {
+            // Check if the link's href is an external URL (not starting with '#')
+            if (link.href && !link.href.startsWith(location.origin) && !link.href.startsWith('#')) {
+                // Add rel="noopener noreferrer" for security
+                link.setAttribute('rel', 'noopener noreferrer');
+                // Add a tooltip to indicate it opens in a new tab
+                link.title = "Opens in a new tab";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

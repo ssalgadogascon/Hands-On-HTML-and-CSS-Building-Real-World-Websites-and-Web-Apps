@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Positioning with Flexbox Example</title>
+    <style>
+        /* Page setup for visibility */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fixed Header */
+        .fixed-header {
+            position: fixed;
+            /* Stays fixed at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+            z-index: 1000;
+            /* Stays above other content */
+        }
+
+        /* Fixed Footer */
+        .fixed-footer {
+            position: fixed;
+            /* Stays fixed at the bottom */
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* Main content area with padding to avoid overlap */
+        .content {
+            padding-top: 80px;
+            /* Space for fixed header */
+            padding-bottom: 70px;
+            /* Space for fixed footer */
+            margin: 20px;
+        }
+
+        /* Fixed Sidebar */
+        .fixed-sidebar {
+            position: fixed;
+            /* Fixed to the left side of the viewport */
+            top: 60px;
+            /* Below the fixed header */
+            left: 0;
+            width: 200px;
+            height: calc(100% - 110px);
+            /* Full height minus header and footer */
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 900;
+            /* Below the header but above other content */
+        }
+
+        /* Flexbox container */
+        .flex-container {
+            display: flex;
+            padding: 20px;
+            border: 2px solid #ddd;
+            margin-left: 220px;
+            /* Space for sidebar */
+        }
+
+        /* Flex items */
+        .flex-item {
+            flex: 1;
+            /* Allows items to grow equally */
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            background-color: #2196F3;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Fixed element within a flex container */
+        .flex-container .fixed-inside-flex {
+            position: fixed;
+            /* Still positioned relative to the viewport, not the flex container */
+            bottom: 100px;
+            /* Fixed 100px from the bottom of the viewport */
+            right: 20px;
+            /* Fixed 20px from the right of the viewport */
+            width: 150px;
+            padding: 10px;
+            background-color: #FF5722;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            z-index: 800;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Header -->
+    <div class="fixed-header">
+        Fixed Header
+    </div>
+
+    <!-- Fixed Sidebar -->
+    <div class="fixed-sidebar">
+        Fixed Sidebar
+        <p>This sidebar remains in view as you scroll the page content.</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <h1>Main Content Area</h1>
+        <p>Scroll down to see how the fixed header, footer, and sidebar remain in place.</p>
+
+        <!-- Flexbox Container with Fixed Element Inside -->
+        <section>
+            <h2>Flexbox Container</h2>
+            <div class="flex-container">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+
+                <!-- Fixed element within a flex container -->
+                <div class="fixed-inside-flex">
+                    Fixed in Viewport
+                </div>
+                <!-- 
+                    This element has "position: fixed" and is inside the flex container.
+                    However, because it’s fixed, it’s positioned relative to the viewport,
+                    not the flex container. It will stay in the bottom-right corner of the viewport
+                    even when scrolling or resizing the flex container.
+                -->
+            </div>
+        </section>
+
+        <!-- More Content to Scroll -->
+        <p style="margin-top: 1000px;">
+            This is additional content to create a scrolling effect.
+            Keep scrolling to see how fixed elements behave as the page scrolls.
+        </p>
+    </div>
+
+    <!-- Fixed Footer -->
+    <div class="fixed-footer">
+        Fixed Footer
+    </div>
+
+</body>
+
+</html>

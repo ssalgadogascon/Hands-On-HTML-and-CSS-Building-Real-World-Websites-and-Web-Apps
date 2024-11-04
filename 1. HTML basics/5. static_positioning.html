@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Positioning Example</title>
+    <style>
+        /* Static positioning (default) */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+
+        /* Attempting to offset (won't work) */
+        .box1 {
+            position: static;
+            top: 20px;
+            /* This will be ignored */
+            left: 20px;
+            /* This will be ignored */
+        }
+
+        /* Adding position relative */
+        .box2 {
+            position: relative;
+            top: 20px;
+            /* This will shift the box */
+            left: 20px;
+            /* This will shift the box */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Static Positioning Example</h1>
+    <p>Here’s a box with <strong>static</strong> positioning (top and left do nothing):</p>
+    <div class="box box1">Static</div>
+
+    <p>Here’s a box with <strong>relative</strong> positioning (top and left apply):</p>
+    <div class="box box2">Relative</div>
+
+</body>
+
+</html>

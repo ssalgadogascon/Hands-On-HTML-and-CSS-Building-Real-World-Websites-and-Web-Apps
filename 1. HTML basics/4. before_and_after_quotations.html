@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <style>
+        /* Style for the <q> element, which represents a short inline quotation */
+
+        /* By default, <q> elements are displayed inline (they do not start a new line) */
+        q {
+            display: inline;
+        }
+
+        /* Styling the <q> element to automatically add quotation marks before and after */
+
+        /* This pseudo-element inserts an opening quotation mark before each <q> element */
+        q:before {
+            content: open-quote;
+            /* Uses the browser's default opening quote character */
+            color: red;
+
+        }
+
+        /* This pseudo-element inserts a closing quotation mark after each <q> element */
+        q:after {
+            content: close-quote;
+            /* Uses the browser's default closing quote character */
+            color: red;
+
+        }
+
+        /* Styling a customized version of the <q> element with a class of "customized" */
+
+        /* This rule applies only to <q> elements with the class "customized" */
+        q.customized:before {
+            content: "- ";
+            /* Inserts a dash and space instead of an opening quotation mark */
+        }
+
+        q.customized:after {
+            content: "- ";
+            /* Inserts a dash and space instead of a closing quotation mark */
+        }
+
+        /* This rule applies only to <q> elements with the class "customized" */
+        q.customized:hover:before {
+            content: "- ";
+            /* Inserts a dash and space instead of an opening quotation mark */
+            color: violet;
+
+        }
+
+        q.customized:hover:after {
+            content: "- ";
+            /* Inserts a dash and space instead of a closing quotation mark */
+            color: violet;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Explanation paragraph for the default <q> element -->
+    <p>A q element is displayed like this:</p>
+
+    <!-- A standard <q> element with default quotation marks before and after -->
+    <q>Build a future where people live in harmony with nature.</q>
+
+    <!-- Explanation paragraph for the customized <q> element -->
+    <p>A customized q element (changed "content"):</p>
+
+    <!-- A <q> element with the "customized" class, which changes the quotes to dashes -->
+    <q class="customized">Build a future where people live in harmony with nature.</q>
+
+</body>
+
+</html>

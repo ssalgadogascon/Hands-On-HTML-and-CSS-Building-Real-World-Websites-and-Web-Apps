@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Positioning with Hover-to-Show Sidebar</title>
+    <style>
+        /* Page setup for visibility */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fixed Header */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* Fixed Footer */
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* Main content area with padding to avoid overlap */
+        .content {
+            padding-top: 80px;
+            /* Space for fixed header */
+            padding-bottom: 70px;
+            /* Space for fixed footer */
+            margin: 20px;
+        }
+
+        /* Hidden Sidebar with Hover-to-Show Effect */
+        .fixed-sidebar {
+            position: fixed;
+            top: 60px;
+            /* Below the header */
+            left: -180px;
+            /* Initially hide off-screen */
+            width: 200px;
+            height: calc(100% - 110px);
+            /* Full height minus header and footer */
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 900;
+            transition: left 0.3s ease;
+            /* Smooth transition for sliding effect */
+        }
+
+        /* Sidebar Hover Effect */
+        .sidebar-tab {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 20px;
+            height: 100px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 950;
+            /* Keep it above the sidebar */
+        }
+
+        /* Show the sidebar when hovering over the tab or sidebar itself */
+        .sidebar-tab:hover+.fixed-sidebar,
+        .fixed-sidebar:hover {
+            left: 0;
+            /* Slide the sidebar into view */
+        }
+
+        /* Flexbox container */
+        .flex-container {
+            display: flex;
+            padding: 20px;
+            border: 2px solid #ddd;
+            margin-left: 20px;
+            /* Adjust to account for sidebar tab */
+        }
+
+        /* Flex items */
+        .flex-item {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            background-color: #2196F3;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Fixed element within a flex container */
+        .flex-container .fixed-inside-flex {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 150px;
+            padding: 10px;
+            background-color: #FF5722;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            z-index: 800;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Header -->
+    <div class="fixed-header">
+        Fixed Header
+    </div>
+
+    <!-- Sidebar Tab (Hover this to reveal the sidebar) -->
+    <div class="sidebar-tab">
+        >
+    </div>
+
+    <!-- Fixed Sidebar (hidden off-screen until hovered) -->
+    <div class="fixed-sidebar">
+        <p>Fixed Sidebar</p>
+        <p>This sidebar remains in view when hovering over the tab or sidebar itself.</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <h1>Main Content Area</h1>
+        <p>Scroll down to see how the fixed header, footer, and sidebar remain in place.</p>
+
+        <!-- Flexbox Container with Fixed Element Inside -->
+        <section>
+            <h2>Flexbox Container</h2>
+            <div class="flex-container">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+
+                <!-- Fixed element within a flex container -->
+                <div class="fixed-inside-flex">
+                    Fixed in Viewport
+                </div>
+            </div>
+        </section>
+
+        <!-- More Content to Scroll -->
+        <p style="margin-top: 1000px;">
+            This is additional content to create a scrolling effect.
+            Keep scrolling to see how fixed elements behave as the page scrolls.
+        </p>
+    </div>
+
+    <!-- Fixed Footer -->
+    <div class="fixed-footer">
+        Fixed Footer
+    </div>
+
+</body>
+
+</html>

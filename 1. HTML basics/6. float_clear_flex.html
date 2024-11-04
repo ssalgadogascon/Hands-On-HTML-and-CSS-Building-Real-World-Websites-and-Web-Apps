@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float, Clear, Positioning, and Flexbox Examples</title>
+    <style>
+        /* General styles for boxes */
+        .box {
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Float Examples */
+        .float-container {
+            border: 2px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            overflow: auto;
+            /* To clear floats */
+        }
+
+        .float-left {
+            float: left;
+            width: 30%;
+            background-color: #4CAF50;
+        }
+
+        .float-right {
+            float: right;
+            width: 30%;
+            background-color: #FF5722;
+        }
+
+        .float-none {
+            float: none;
+            width: 100%;
+            background-color: #009688;
+        }
+
+        /* Clear Examples */
+        .clear-container {
+            border: 2px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .clear-left {
+            clear: left;
+            background-color: #3F51B5;
+        }
+
+        .clear-both {
+            clear: both;
+            background-color: #E91E63;
+        }
+
+        /* Positioning Examples */
+        .position-container {
+            border: 2px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            height: 200px;
+            position: relative;
+        }
+
+        .static-box {
+            position: static;
+            background-color: #8BC34A;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #FF9800;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #9C27B0;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 200px;
+            background-color: #795548;
+        }
+
+        /* Flexbox Examples */
+        .flex-container {
+            display: flex;
+            border: 2px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            padding: 20px;
+            margin: 5px;
+            color: white;
+        }
+
+        .flex-item-1 {
+            background-color: #F44336;
+        }
+
+        .flex-item-2 {
+            background-color: #2196F3;
+        }
+
+        .flex-item-3 {
+            background-color: #4CAF50;
+        }
+
+        .flex-item-4 {
+            background-color: #F0AF50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Float, Clear, Positioning, and Flexbox Examples</h1>
+
+    <!-- Float Example -->
+    <section>
+        <h2>Float Example</h2>
+        <div class="float-container">
+            <div class="box float-left">Float Left</div>
+            <div class="box float-right">Float Right</div>
+            <div class="box float-none">Float None</div>
+            <p>This is an example of floating elements. The first box is floated to the left, the second box to the
+                right, and the third box does not float.</p>
+        </div>
+    </section>
+
+    <!-- Clear Example -->
+    <section>
+        <h2>Clear Example</h2>
+        <div class="clear-container">
+            <div class="box float-left">Float Left</div>
+            <div class="box float-left">Float Left</div>
+            <div class="box clear-left">Clear Left</div>
+            <p>The clear property is used here. The "Clear Left" box is forced below the floated boxes on the left.</p>
+
+            <div class="box float-left">Float Left</div>
+            <div class="box float-right">Float Right</div>
+            <div class="box clear-both">Clear Both</div>
+            <p>The "Clear Both" box clears both the left and right floats, so it appears below all floated elements.</p>
+        </div>
+    </section>
+
+    <!-- Positioning Example -->
+    <section>
+        <h2>Positioning Example</h2>
+        <div class="position-container">
+            <div class="box static-box">Static Position</div>
+            <div class="box relative-box">Relative Position</div>
+            <div class="box absolute-box">Absolute Position</div>
+            <p>This example demonstrates different positioning values: "Static" (default), "Relative" (shifted from its
+                original place), and "Absolute" (positioned relative to the container).</p>
+        </div>
+        <div class="fixed-box">Fixed Position (Stays in viewport)</div>
+    </section>
+
+    <!-- Flexbox Example -->
+    <section>
+        <h2>Flexbox Example</h2>
+        <div class="flex-container">
+            <div class="flex-item flex-item-1">Flex Item 1</div>
+            <div class="flex-item flex-item-2">Flex Item 2</div>
+            <div class="flex-item flex-item-3">Flex Item 3</div>
+            <div class="flex-item flex-item-4" style="display: none;">Flex Item 4</div>
+
+        </div>
+        <p>In this example, we use Flexbox to create a flexible layout. Each item takes up an equal amount of space and
+            is easily adjustable for responsive designs.</p>
+    </section>
+
+</body>
+
+</html>

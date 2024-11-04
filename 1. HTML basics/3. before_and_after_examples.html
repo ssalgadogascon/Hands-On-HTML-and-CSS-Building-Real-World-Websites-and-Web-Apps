@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Element Example</title>
+    <style>
+        /* Basic link styling */
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Adds an icon before the link (like an arrow) */
+        a::before {
+            content: "→ ";
+            /* Unicode arrow symbol before each link */
+            color: gray;
+        }
+
+        /* Adds a note after the link */
+        a[target="_blank"]::after {
+            content: " (opens in new tab)";
+            /* Text after links with target="_blank" */
+            font-size: 0.9em;
+            color: violet;
+        }
+
+
+
+        /* Fancy styling for paragraphs */
+        p::first-letter {
+            font-size: 2em;
+            /* Make the first letter larger */
+            font-weight: bold;
+            color: teal;
+        }
+
+        /* Override the first letter styling for links inside paragraphs */
+        p.a {
+
+            color: red;
+            /* Inherit color from the surrounding text */
+        }
+
+        /* Override the first letter styling for links inside paragraphs */
+        p::first-line {
+            font-size: 1em;
+            /* Reset to normal size */
+            font-weight: normal;
+            color: yellow;
+            /* Inherit color from the surrounding text */
+        }
+    </style>
+</head>
+
+<body>
+    <p><a href="https://www.example.com" target="_blank">Visit Example.com</a></p>
+    <p>This is a paragraph with a styled <a href="#link">link</a> inside it.</p>
+    <p>Another paragraph to show <a href="#another">different styling</a> effects.</p>
+</body>
+
+</html>
