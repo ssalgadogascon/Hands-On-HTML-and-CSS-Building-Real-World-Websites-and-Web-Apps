@@ -1,1 +1,45 @@
-/* ARCHIVO DE ESTILOS */
+/* estilos.css */
+
+/* Contenedor de la barra de navegación */
+.navbar {
+    position: fixed; /* Fija la barra en la parte superior de la pantalla */
+    top: 0;
+    width: 100%; /* Asegura que ocupe el ancho completo de la pantalla */
+    background-color: #768fad;
+    overflow: hidden;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+}
+
+/* Espacio para el contenido, ajusta según el tamaño de tu barra */
+
+
+.navbar-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para los enlaces de la barra */
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Efecto hover */
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Estilo para el enlace activo */
+.navbar a.active {
+    background-color: #1e5765;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página */
+}
