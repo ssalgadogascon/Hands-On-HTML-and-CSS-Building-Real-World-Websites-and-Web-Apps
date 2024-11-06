@@ -1,40 +1,97 @@
-<style>
-        /* Estilos para centrar el formulario y darle formato */
-        .form-container {
-            max-width: 30%;
-            margin: 0 auto;
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #e7fffb;
-        }
-        h2 {
-            text-align: center;
-        }
-        label {
-            font-weight: bold;
-        }
-        input[type="text"], textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 100px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+/* Estilos para centrar el formulario y darle formato */
+.form-container {
+    position: relative;
+    top: 80px;
+    max-width: 30%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e7fffb;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* estilos.css */
+
+/* Contenedor de la barra de navegación */
+.navbar {
+    position: fixed;
+    /* Fija la barra en la parte superior de la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Asegura que ocupe el ancho completo de la pantalla */
+    background-color: #768fad;
+    overflow: hidden;
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+
+}
+
+/* Espacio para el contenido, ajusta según el tamaño de tu barra */
+
+
+.navbar-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para los enlaces de la barra */
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Efecto hover */
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Estilo para el enlace activo */
+.navbar a.active {
+    background-color: #1e5765;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Fuente de la página */
+}
