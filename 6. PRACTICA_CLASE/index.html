@@ -14,21 +14,45 @@
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            background-image: url('Imagen de WhatsApp 2024-11-06 a las 17.59.53_1f3038c8.jpg'); /* Aquí va la ruta de tu imagen */
-            background-size: 20%;       /* Ajusta la imagen para que cubra toda la pantalla */
-            background-position: center;  /* Centra la imagen */
-            background-repeat: repeat; /* Evita que la imagen se repita */
+            overflow: hidden;
+            background-image: url('FotoWhatsapp.jpg'); /* Ruta de tu imagen */
+            background-size: 20%;
+            background-position: center;
+            background-attachment: fixed; /* Fija la imagen al fondo */
+            background-repeat: repeat;
         }
-        
+
+        /* Efecto psicodélico superpuesto */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, rgba(255, 0, 204, 0.3), rgba(51, 51, 255, 0.3), rgba(255, 153, 51, 0.3), rgba(51, 255, 51, 0.3), rgba(51, 204, 255, 0.3), rgba(255, 102, 153, 0.3));
+            background-size: 1200% 1200%;
+            animation: psychedelic-bg 1s ease infinite;
+            z-index: 0;
+            pointer-events: none; /* Evita que interfiera con los clics */
+        }
+
+        /* Animación de fondo psicodélico */
+        @keyframes psychedelic-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
         /* Contenedor de la lista */
         .task-list-container {
             width: 30%;
             padding: 20px;
-            background-color: #d3acac;
+            background-color: rgba(211, 172, 172, 0.9); /* Fondo semitransparente */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
             margin: 10% 0 0 15%; /* 10% de margen arriba, 15% a la izquierda */
+            z-index: 1; /* Coloca el contenedor sobre el fondo animado */
         }
 
         /* Estilos para el encabezado */
@@ -56,13 +80,19 @@
         <h2>Lista de Mejoras de la Clase</h2>
         <ul id="task-list">
             <li>Hacer más ejercicios prácticos</li>
+            <li>SNACKS GRATIS</li>
+            <li>Miércoles de bolos</li>
+            <li>Jueves de racismo</li>
             <li>10 minutos de meditación diarios</li>
             <li>Hacer un resumen al final de la clase</li>
             <li>Al principio de la clase hacer repaso de la sesión anterior</li>
             <li>Tener una perspectiva general de la asignatura y nuestro recorrido por ella</li>
-            <li>SNACKS GRATIS</li>
         </ul>
     </div>
+
+    <audio autoplay loop>
+        <source src="Camino.mp3" type="audio/mpeg">
+    </audio>
 
 </body>
 </html>
