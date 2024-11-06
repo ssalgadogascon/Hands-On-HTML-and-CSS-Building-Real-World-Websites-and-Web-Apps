@@ -9,6 +9,74 @@
 </head>
 
 <body>
+    <div class="form-container">
+        <h2>Formulario de Evaluación de Clase</h2>
+
+        <form action="mailto:9403432@alumnos.ufv.es" method="post" enctype="text/plain">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            <br><br>
+
+            <label for="idEscuela">ID de la Escuela:</label>
+            <input type="text" id="idEscuela" name="idEscuela" required>
+            <br><br>
+
+            <label for="puntosBuenos">Puntos Buenos de la Clase:</label>
+            <textarea id="puntosBuenos" name="puntosBuenos" rows="4" required></textarea>
+            <br><br>
+
+            <label for="puntosMejorar">Puntos a Mejorar de la Clase:</label>
+            <textarea id="puntosMejorar" name="puntosMejorar" rows="4" required></textarea>
+            <br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+<style>
+        /* Estilos para centrar el formulario y darle formato */
+        .form-container {
+            max-width: 50%;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #e7fffb;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 100px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
 
 </body>
 
