@@ -4,6 +4,7 @@
 .navbar {
     position: fixed; /* Fija la barra en la parte superior de la pantalla */
     top: 0;
+    left: 0;
     width: 100%; /* Asegura que ocupe el ancho completo de la pantalla */
     background-color: #768fad;
     overflow: hidden;
