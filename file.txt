@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 Initial file content
 Hola amigo espero que estés muy bien, paso a dejarte este mensaje y me retiro. Saludos cordiales. 
 Atte: JorgeVC Git Influencer
+=======
+Initial file content Cambios a ver si aparecen
+pRUEBA 
+>>>>>>> main
