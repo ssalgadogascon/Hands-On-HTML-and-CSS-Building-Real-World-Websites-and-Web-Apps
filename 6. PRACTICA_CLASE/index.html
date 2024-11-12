@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +15,13 @@
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            overflow: hidden;
-            background-image: url('FotoWhatsapp.jpg'); /* Ruta de tu imagen */
+            /* overflow: hidden; */
+            background-image: url('FotoWhatsapp.jpg');
+            /* Ruta de tu imagen */
             background-size: 20%;
             background-position: center;
-            background-attachment: fixed; /* Fija la imagen al fondo */
+            background-attachment: fixed;
+            /* Fija la imagen al fondo */
             background-repeat: repeat;
         }
 
@@ -34,25 +37,37 @@
             background-size: 1200% 1200%;
             animation: psychedelic-bg 1s ease infinite;
             z-index: 0;
-            pointer-events: none; /* Evita que interfiera con los clics */
+            pointer-events: none;
+            /* Evita que interfiera con los clics */
         }
 
         /* Animación de fondo psicodélico */
         @keyframes psychedelic-bg {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* Contenedor de la lista */
         .task-list-container {
             width: 30%;
             padding: 20px;
-            background-color: rgba(211, 172, 172, 0.9); /* Fondo semitransparente */
+            background-color: rgba(211, 172, 172, 0.9);
+            /* Fondo semitransparente */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
-            margin: 10% 0 0 15%; /* 10% de margen arriba, 15% a la izquierda */
-            z-index: 1; /* Coloca el contenedor sobre el fondo animado */
+            margin: 10% 0 0 15%;
+            /* 10% de margen arriba, 15% a la izquierda */
+            z-index: 1;
+            /* Coloca el contenedor sobre el fondo animado */
         }
 
         /* Estilos para el encabezado */
@@ -65,7 +80,8 @@
         ul {
             padding: 0;
             list-style-type: disc;
-            padding-left: 20px; /* Espacio para las viñetas */
+            padding-left: 20px;
+            /* Espacio para las viñetas */
         }
 
         ul li {
@@ -74,10 +90,11 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <audio autoplay loop>
-        <source src="caminitos.mp3" type="audio/mpeg">
+        <source src="caminitos.mp3" type="audio/mp3">
         Tu navegador no soporta el elemento de audio.
     </audio>
 
@@ -98,4 +115,5 @@
         </ul>
     </div>
 </body>
+
 </html>
