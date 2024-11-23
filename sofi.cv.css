@@ -1,0 +1,110 @@
+/* Base Styles */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e4d7;
+    /* Soft beige background */
+}
+
+#cv {
+    width: 75%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    /* White background for CV */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for the CV */
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px solid #0e7545;
+    /* Blue border beneath the header */
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+    /* Dark blue shade for name */
+}
+
+header p {
+    font-style: italic;
+    color: #0e7545;
+    /* Matching blue for role/title */
+}
+
+h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: #2c3e50;
+    /* Dark blue shade for section titles */
+}
+
+* Contact Details */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%; 
+}
+
+.contact-photo.left {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 600px; /* Añade separación entre la foto y el texto */
+    margin-top: 20px;
+}
+
+.contact-info.right {
+    flex: 1;
+    text-align: left; /* Justifica el texto a la izquierda */
+}
+
+.contact-info.right h2 {
+    text-align: left; /* Alinea el título a la izquierda */
+    width: 100%; 
+}
+
+
+/* Clearing the floats for the sections below the contact */
+#education,
+#skills,
+#experience {
+    clear: both;
+}
+
+/* Skills */
+#skills li {
+    list-style-type: none;
+    margin: 5px 0;
+    border-left: 5px solid #0e7545;
+    /* Blue border on the left */
+    padding-left: 10px;
+    /* Spacing between the border and text */
+}
+
+/* Experience */
+#experience article {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    /* Light gray background */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+#experience article h3 {
+    margin-top: 0;
+}
+
+#experience article p {
+    margin: 5px 0;
+}
